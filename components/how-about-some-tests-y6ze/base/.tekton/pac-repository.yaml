@@ -1,0 +1,15 @@
+apiVersion: pipelinesascode.tekton.dev/v1alpha1
+kind: Repository
+metadata:
+  annotations:
+    appstudio.openshift.io/application: how-about-some-tests
+    appstudio.openshift.io/component: how-about-some-tests-y6ze
+    build.appstudio.openshift.io/build: "true"
+    build.appstudio.openshift.io/type: build
+    build.appstudio.openshift.io/version: "0.1"
+    pipelines.appstudio.openshift.io/type: build
+  creationTimestamp: null
+  name: how-about-some-tests-y6ze
+  namespace: eric-deandrea-tenant
+spec:
+  url: https://github.com/edeandrea/how-about-some-tests

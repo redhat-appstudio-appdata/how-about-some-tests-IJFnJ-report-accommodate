@@ -1,0 +1,23 @@
+apiVersion: route.openshift.io/v1
+kind: Route
+metadata:
+  creationTimestamp: null
+  labels:
+    app.kubernetes.io/created-by: application-service
+    app.kubernetes.io/instance: how-about-some-tests-y6ze
+    app.kubernetes.io/managed-by: kustomize
+    app.kubernetes.io/name: how-about-some-tests-y6ze
+    app.kubernetes.io/part-of: how-about-some-tests
+  name: how-about-some-tests-y6ze
+  namespace: eric-deandrea-tenant
+spec:
+  port:
+    targetPort: 8081
+  tls:
+    insecureEdgeTerminationPolicy: Redirect
+    termination: edge
+  to:
+    kind: Service
+    name: how-about-some-tests-y6ze
+    weight: 100
+status: {}
